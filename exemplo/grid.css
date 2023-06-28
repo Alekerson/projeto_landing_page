@@ -2,5 +2,17 @@
 border: 1px solid black;}
 
 body{display: grid; 
-grid-template-columns: 30% 70%;
-height: 100vh;}
+grid-template-columns: 70% 30%; /*a quatidade de valores que tu bota define quantas colunas vai ter, levando em consideração 100% do viewport*/
+height: 100vh;
+grid-template-areas: 'header main'
+                     'aside aside'
+                     'footer footer'
+;}/*define as variaveis para formar o layout do teu site */
+
+header{grid-area: header;}/*aqui estou informando que a variavel la em grid-teplate-area está associada a tag*/
+
+main{grid-area: main;}
+
+aside{grid-area: aside;}
+
+footer{grid-area: footer;}
