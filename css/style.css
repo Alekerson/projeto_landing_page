@@ -1,0 +1,29 @@
+/* RESETAR CONFIGURAÇÃO PADRÃO DO NAVEGADOR */
+*{margin: 0;
+padding: 0;
+box-sizing: border-box;
+outline: none;}
+
+body{font-family: Arial, Helvetica, sans-serif;
+color: #fff;
+height: 100vh;
+display: grid;
+grid-template-columns: 75% 25%;
+grid-template-areas: 'cabecalho formulario'
+                     'principal formulario'
+                     'rodape formulario';}
+/* HEADER */
+header{grid-area: cabecalho;}
+.logo{display: flex;/*para tornar os elementos flexíveis*/
+   align-items: center; 
+    border: 1px solid red;
+padding: 10px 30px;}
+.logo h1{color: #274083;
+    margin-left: 20px;}
+.logo img{width: 80px;}
+/*  MAIN*/
+main{grid-area: principal;}
+/* ASIDE */
+aside{grid-area: formulario;}
+/* FOOTER */
+footer{grid-area: rodape;}
