@@ -19,15 +19,19 @@ header{grid-area: cabecalho;}
 align-items: center; 
 border: 1px solid red;
 padding: 10px 30px;}
+/* VARIAVEIS*/
+:root{
+    --corAzul: #274083 
+}
 
-.logo h1{color: #274083;
+.logo h1{color: var(--corAzul);
     margin-left: 20px;}
 
 .logo img{width: 80px;}
 
 /*  MAIN*/
 main{grid-area: principal;
-background: linear-gradient(to right, #48a0df, #274083);
+background: linear-gradient(to right, #48a0df, var(--corAzul));
 display: flex;
 align-items: center;
 padding-left: 50px;
@@ -46,7 +50,18 @@ main section h3{ width: 80%;}
 
 /* ASIDE */
 aside{grid-area: formulario;
-background-color: #274083;}
+background-color: var(--corAzul);}
 
 /* FOOTER */
-footer{grid-area: rodape;}
+footer{grid-area: rodape;
+background-color: #ccc;
+color: var(--corAzul);
+display: flex;
+padding: 30px;}
+
+footer section{margin: 5px 20px;}
+
+footer .rodape-titulo{margin-bottom: 20px;}
+
+footer .rodape-conteudo{text-align: justify;
+line-height: 0.7cm;}
