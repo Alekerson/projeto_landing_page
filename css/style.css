@@ -17,7 +17,6 @@ grid-template-areas: 'cabecalho formulario'
 header{grid-area: cabecalho;}
 .logo{display: flex;/*para tornar os elementos flexíveis*/
 align-items: center; 
-border: 1px solid red;
 padding: 10px 30px;}
 /* VARIAVEIS*/
 :root{
@@ -51,6 +50,41 @@ main section h3{ width: 80%;}
 /* ASIDE */
 aside{grid-area: formulario;
 background-color: var(--corAzul);}
+
+aside h1{text-align: center; 
+margin-bottom: 20px;
+line-height: 1cm;
+margin-top: 20px;}
+
+aside form{width: 90%;
+margin: 0 auto;
+display: flex;
+flex-direction: column;
+gap: 20px;}
+
+aside form input, aside form select, aside form button{padding: 10px;
+font-size: 16px;
+border: none;
+border-radius: 20px;
+}
+
+::placeholder{color: black;}
+
+aside input:focus, aside select:focus{outline: 2px solid #48a0df;} 
+/* aside:where(input, select):focus{outline: 2px solid #48a0df;} */
+
+aside form button{background-color: #11dd2c;  
+cursor: pointer;
+transition: all 0.2s linear;}
+
+aside form button:hover{box-shadow: 0 0 10px #000;
+    transition: all 0.2s linear;}
+
+aside small{margin-top: 20px;
+margin-bottom: 20px;
+padding: 10px;
+display: block;
+align-items: center;}
 
 /* FOOTER */
 footer{grid-area: rodape;
