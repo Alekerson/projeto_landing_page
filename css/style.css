@@ -70,8 +70,8 @@ border-radius: 20px;
 
 ::placeholder{color: black;}
 
-aside input:focus, aside select:focus{outline: 2px solid #48a0df;} 
-/* aside:where(input, select):focus{outline: 2px solid #48a0df;} */
+/* aside input:focus, aside select:focus{outline: 2px solid #48a0df;}  */
+aside :where(input, select):focus{outline: 2px solid #48a0df;}/*Não pode deixar o seletor :where colado em outro seletor, caso contrario não irá funcionar*/
 
 aside form button{background-color: #11dd2c;  
 cursor: pointer;
@@ -99,3 +99,38 @@ footer .rodape-titulo{margin-bottom: 20px;}
 
 footer .rodape-conteudo{text-align: justify;
 line-height: 0.7cm;}
+
+/*RESPONSIVIDADE*/
+/*Tablet*/
+
+@media screen and (max-width:1200px) {
+    body{
+        grid-template-columns: 100%;
+        grid-template-areas: 'cabecalho'
+                             'principal'
+                             'rodape'
+                             'formulario';
+    }
+
+    main figure {
+        margin-right: 20px;
+    }
+    main{height: 50vh;}
+
+}
+
+/*Smartphone*/
+
+@media screen and (max-width:750px) {  
+    main figure{display:none;} 
+
+    main{background:#48a0df  url(../imagens/livro2.png);
+    background-size: 200px; 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: multiply;}
+
+    main h1, main h3{ width: 100%; text-shadow: 2px 1px 2px #000;}
+
+    footer {flex-direction: column; row-gap: 20px;}
+}
